@@ -1,0 +1,27 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "nodejs app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsakhi/e-commerce.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "rsakhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsakhi/e-commerce/issues"
+  },
+  "homepage": "https://github.com/rsakhi/e-commerce#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
