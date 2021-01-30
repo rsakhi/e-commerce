@@ -7,6 +7,7 @@ const productRoutes = require('./routes/product_routes')
 const adminRoutes = require('./routes/admin_routes')
 
 const app = expess();
+app.use(expess.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs');
 app.set('viwes', './views')
 
@@ -16,10 +17,14 @@ app.use('/product', productRoutes);
 
 app.use('/admin', adminRoutes);
 
-app.use('/', (req,res,next) => {
+app.get('/', (req,res,next) => {
   console.log(req.url)
   res.render('Home', {title: 'shop page'})
 })
 
-
-app.listen(8081)
+// app.use('/', (req,res,next) => {
+//   console.log("dededededdeeded")
+//   res.sendStatus(404)
+//   res.render('not_found')
+// })
+  app.listen(8081)

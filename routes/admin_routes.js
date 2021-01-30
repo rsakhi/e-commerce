@@ -3,12 +3,12 @@ const router = express.Router();
 
 router.get('/products', (req,res,next) => {
     console.log("inside admin prod list")
-    res.send()
+    res.render('admin/products', {page: 'admin_product'})
 })
 
 router.get('/product/new', (req,res,next) => {
   console.log("inside admin new prod")
-  res.send()
+  res.render('admin/product_form',{page: 'add_product'})
 })
 
 router.post('/product', (req,res,next) => {

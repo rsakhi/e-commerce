@@ -5,19 +5,19 @@ const router = express.Router()
 router.get('/', (req,res,next) => {
   console.log('from product routes')
   console.log(req.url)
-  res.end
+  res.render('product',{page: 'product'})
 })
 
 router.post('/', (req,res,next) => {
   console.log('from product routes Post')
   console.log(req.url)
-  res.end
+  res.send()
 })
 
 router.get('/:id/details', (req,res,next) => {
     console.log("inside details page");
     console.log(req.params.id)
-    res.end
+    res.send()
 })
 
 module.exports = router;
